@@ -17,6 +17,11 @@ body {
     background-size: cover;
     background-position: center;
   }
+
+  #weatherIcon {
+    width: 50%;
+    height: auto;
+  }
   
   .weather-info {
     height: auto;
