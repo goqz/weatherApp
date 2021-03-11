@@ -30,9 +30,13 @@ class WeatherApp {
       getWeatherByCity(query).then(data => {
         this.displayWeatherData(data);
         this.viewElems.searchInput.style.borderColor = 'black';
+        this.viewElems.errorText.innerText = '';
+        this.viewElems.searchInput.value = '';
       }).catch(() => {
         this.fadeInOut();
         this.viewElems.searchInput.style.borderColor = 'red';
+        this.viewElems.errorText.style.color = "red";
+        this.viewElems.errorText.innerText = 'Nie znaleziono takiego miasta';
       })
     }
   }
